@@ -1,0 +1,2 @@
+# shimazu_R-rivals
+ 
