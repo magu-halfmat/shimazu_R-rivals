@@ -7,17 +7,19 @@ public class CardGenerator : MonoBehaviour
     [SerializeField]
     Card cardPrefab;
 
-    private void Start()
+    //‚Ç‚±‚©‚ç‚Å‚àŽg‚¦‚é‚æ‚¤‚É‚·‚é
+    public static CardGenerator instance;
+
+    private void Awake()
     {
-        for (int i = 0; i < 8; i++)
-        {
-            Spawn(i);
-        }
+        instance = this;
     }
-    public void Spawn(int number)
+
+       public Card Spawn(int number)
     {
         Card card = Instantiate(cardPrefab);
         card.Init(number);
+        return card;
     }
    
 }
