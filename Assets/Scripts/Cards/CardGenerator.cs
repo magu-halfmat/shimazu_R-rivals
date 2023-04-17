@@ -15,7 +15,7 @@ public class CardGenerator : MonoBehaviour
         instance = this;
     }
 
-       public Card Spawn(int number)
+    public Card Spawn(int number)
     {
         Card card = Instantiate(cardPrefab);
         card.Init(number);
